@@ -82,7 +82,8 @@ private:
 };
 
 Sales_data::Sales_data(std::istream &is) {
-    is >> *this;
+    read(is, *this);    // read函数的作用是从is中读取一条交易信息然后
+                        // 存入this对象中
 }
 
 Sales_data::Sales_data(const std::string &book, const unsigned num, const double sellp, const double salep) {

@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    while (getline(cin, line)) {
+    while (getline(in, line)) {
         PersonInfo info;        // 创建一个保存此记录
         record.clear();         // 重复使用字符串流时，每次都要调用clear
         record.str(line);       // 将记录绑定到刚读入的行
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
             << " invalid number(s) " << badNums.str() << endl;
         }
     }
-    cout << os.str() << endl;
+    cout << os.str();
 
     return 0;
 }
